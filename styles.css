@@ -2894,69 +2894,9 @@ body {
         transform: translateY(-30px) !important;
     }
 }
-
 /* =========================================================
-   FEATURED SIGNALS — FULL WIDTH BELOW MARQUEE
+   CIPHER TEAM — FINAL CARD TEMPLATE
    ========================================================= */
-
-.feature-signals {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    width: 100% !important;
-    gap: 14px !important;
-    margin-top: 45px !important;
-}
-
-/* Heading goes across the full width */
-.feature-signals .mini-head {
-    grid-column: 1 / -1 !important;
-
-    display: flex !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    margin-bottom: 10px !important;
-}
-
-/* Two cards below the heading */
-.feature-signals .signal-card {
-    width: 100% !important;
-    min-height: 170px !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 760px) {
-
-    .feature-signals {
-        grid-template-columns: 1fr !important;
-    }
-
-    .feature-signals .mini-head {
-        grid-column: 1 !important;
-    }
-}
-
-/* CIPHER TEAM — 9 MEMBERS */
-#team .team-grid {
-    display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    gap: 12px !important;
-    width: 100% !important;
-}
-
-#team .team-card {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-/* =========================================
-   CIPHER TEAM MEMBER PHOTOS
-   ========================================= */
 
 #team .team-grid {
     display: grid;
@@ -2965,93 +2905,171 @@ body {
     width: 100%;
 }
 
-
-/* TEAM CARD */
-
+/* CARD */
 #team .team-card {
     position: relative;
+
+    width: 100%;
+    height: 335px;
+    min-height: 335px;
+
+    padding: 18px;
+
+    display: block !important;
+
+    border: 1px solid var(--line);
+    background: var(--graphite);
+    color: var(--warm);
+
+    text-align: left;
     overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .3s;
 }
 
-
 /* NUMBER */
-
-#team .team-number {
+#team .team-index {
     position: absolute;
+
     top: 18px;
     left: 20px;
+
+    font: 8px var(--mono);
+    color: var(--gold);
+
     z-index: 5;
 }
 
+/* AVATAR / INITIALS */
+#team .avatar {
+    position: absolute;
 
-/* PHOTO AREA */
+    top: 65px;
+    left: 50%;
 
-#team .team-photo {
-    width: 100%;
-    height: 230px;
-    overflow: hidden;
-    position: relative;
+    transform: translateX(-50%);
+
+    width: 90px;
+    height: 90px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--line2);
+    border-radius: 50%;
+
+    font-family: Georgia, serif;
+    font-size: 30px;
+
+    background: radial-gradient(
+        circle at 40% 30%,
+        rgba(255,255,255,.06),
+        transparent 45%
+    );
+
+    z-index: 3;
 }
-
-
-/* PHOTO */
-
-#team .team-photo img {
-    width: 100%;
-    height: 100%;
-    display: block;
-
-    object-fit: cover;
-
-    /* Focus more on the person than the poster text */
-    object-position: center 35%;
-
-    transition: transform 0.5s ease;
-}
-
-
-/* HOVER */
-
-#team .team-card:hover .team-photo img {
-    transform: scale(1.04);
-}
-
 
 /* ROLE */
-
 #team .team-role {
-    margin-top: 18px;
-}
+    position: absolute;
 
+    left: 20px;
+    bottom: 82px;
+
+    margin: 0;
+
+    font-family: var(--mono);
+    font-size: 8px;
+    letter-spacing: .13em;
+
+    color: var(--red);
+
+    z-index: 5;
+}
 
 /* NAME */
+#team .team-card strong {
+    position: absolute;
 
-#team .team-card h3 {
-    margin-top: 8px;
+    left: 20px;
+    right: 20px;
+    bottom: 43px;
+
+    display: block;
+
+    margin: 0;
+
+    font-family: var(--display);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: var(--warm);
+
+    z-index: 5;
+}
+
+/* VIEW PROFILE */
+#team .team-card small {
+    position: absolute;
+
+    left: 20px;
+    bottom: 18px;
+
+    margin: 0;
+
+    font: 8px var(--mono);
+
+    color: #8f949d;
+
+    z-index: 5;
+}
+
+/* BOTTOM SUBTLE GLOW */
+#team .team-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 110px;
+
+    background: linear-gradient(
+        to top,
+        rgba(239,81,71,.08),
+        transparent
+    );
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+/* HOVER */
+#team .team-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--line2);
+}
+
+#team .team-card:hover .avatar {
+    transform: translateX(-50%) scale(1.04);
+}
+
+/* KEEP ALL CARDS VISIBLE */
+#team .team-grid:hover .team-card:not(:hover) {
+    opacity: 1;
 }
 
 
-/* PROFILE */
-
-#team .team-profile {
-    display: inline-block;
-    margin-top: 16px;
-    text-decoration: none;
-}
-
-
-/* =========================================
-   SECOND ROW
-   ========================================= */
-
-#team .team-card:nth-child(n+6) {
-    margin-top: 0;
-}
-
-
-/* =========================================
+/* =========================================================
    RESPONSIVE
-   ========================================= */
+   ========================================================= */
 
 @media (max-width: 1100px) {
 
@@ -3061,15 +3079,18 @@ body {
 
 }
 
-
-@media (max-width: 700px) {
+@media (max-width: 760px) {
 
     #team .team-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-}
+    #team .team-card {
+        height: 320px;
+        min-height: 320px;
+    }
 
+}
 
 @media (max-width: 480px) {
 
