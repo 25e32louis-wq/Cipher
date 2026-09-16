@@ -3268,3 +3268,131 @@ body {
         pointer-events: none;
     }
 }
+
+/* =========================================================
+   CIPHER INTRO ANIMATION
+   ========================================================= */
+
+#cipher-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #050608;
+
+    overflow: hidden;
+
+    animation: cipherIntroExit 0.7s ease forwards;
+    animation-delay: 2.3s;
+}
+
+#cipher-intro .intro-logo {
+    position: relative;
+    z-index: 2;
+
+    width: 150px;
+    height: 150px;
+
+    opacity: 0;
+    transform: scale(0.55);
+
+    animation: cipherLogoAppear 1.2s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+#cipher-intro .intro-logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255,255,255,0.2))
+        drop-shadow(0 0 30px rgba(255,255,255,0.1));
+}
+
+#cipher-intro .intro-particles {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.cipher-intro-particle {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 0 5px rgba(255,255,255,0.7),
+        0 0 12px rgba(255,255,255,0.3);
+
+    animation: cipherParticleMove 1.6s ease-in-out forwards;
+}
+
+@keyframes cipherLogoAppear {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.55);
+        filter: blur(12px);
+    }
+
+    60% {
+        opacity: 0.8;
+        transform: scale(0.95);
+        filter: blur(3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes cipherParticleMove {
+
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.4);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(var(--move-x), var(--move-y))
+            scale(0.1);
+    }
+}
+
+@keyframes cipherIntroExit {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
