@@ -2811,3 +2811,61 @@ body {
     z-index: 5;
 }
 
+/* =========================================================
+   FINAL HERO POSITION ADJUSTMENTS
+   ========================================================= */
+
+/* Keep SIGNAL + cursor + full stop together */
+.signal-lockup {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Keep the full stop attached to SIGNAL */
+.hero-period {
+    white-space: nowrap;
+}
+
+/* Move the existing CIPHER globe/core upward */
+.core-stage {
+    transform: translate(-35px, -80px);
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1100px) {
+
+    .core-stage {
+        transform: translate(-35px, -80px);
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1099px) {
+
+    .core-stage {
+        transform: translate(-10px, -55px);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .core-stage {
+        transform: translateY(-20px);
+    }
+
+}
