@@ -1038,8 +1038,9 @@ body {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
 }
 
 .team-card {
@@ -2938,4 +2939,18 @@ body {
     .feature-signals .mini-head {
         grid-column: 1 !important;
     }
+}
+
+/* CIPHER TEAM — 9 MEMBERS */
+#team .team-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+#team .team-card {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
