@@ -2869,3 +2869,29 @@ body {
     }
 
 }
+/* =========================================================
+   FINAL CIPHER GLOBE POSITION
+   ========================================================= */
+
+@media (min-width: 1100px) {
+    .core-stage {
+        position: relative;
+        transform: translate(-35px, -190px) !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1099px) {
+    .core-stage {
+        position: relative;
+        transform: translate(-10px, -100px) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .core-stage {
+        position: relative;
+        transform: translateY(-30px) !important;
+    }
+}
+
+
