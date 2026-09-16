@@ -177,3 +177,71 @@
   const initial = location.hash.replace('#','');
   if (initial && document.getElementById(initial)) setTimeout(() => scrollToId(initial), 50);
 })();
+
+/* =========================================================
+   CIPHER INTRO PARTICLES
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const intro = document.getElementById("cipher-intro");
+    const particleContainer = document.querySelector(".intro-particles");
+
+    if (!intro || !particleContainer) return;
+
+    const particleCount = 90;
+
+    for (let i = 0; i < particleCount; i++) {
+
+        const particle = document.createElement("span");
+
+        particle.className = "cipher-intro-particle";
+
+        /*
+         * Start particles randomly around the screen
+         */
+        const startX = Math.random() * 100;
+        const startY = Math.random() * 100;
+
+        particle.style.left = startX + "%";
+        particle.style.top = startY + "%";
+
+        /*
+         * Move particles toward the center
+         */
+        const moveX = (50 - startX) * 0.65;
+        const moveY = (50 - startY) * 0.65;
+
+        particle.style.setProperty("--move-x", moveX + "vw");
+        particle.style.setProperty("--move-y", moveY + "vh");
+
+        /*
+         * Different timing for each particle
+         */
+        particle.style.animationDelay =
+            (Math.random() * 0.55) + "s";
+
+        /*
+         * Slight size variation
+         */
+        const size = 1 + Math.random() * 2.5;
+
+        particle.style.width = size + "px";
+        particle.style.height = size + "px";
+
+        particleContainer.appendChild(particle);
+    }
+
+
+    /*
+     * Remove intro after animation
+     */
+    setTimeout(() => {
+
+        if (intro) {
+            intro.remove();
+        }
+
+    }, 3200);
+
+});
