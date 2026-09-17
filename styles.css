@@ -1,3 +1,9 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    overflow-anchor: none;
+}
+
 :root {
     --black: #07080B;
     --graphite: #14171D;
