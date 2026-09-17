@@ -5236,3 +5236,50 @@ body {
 .desktop-nav .nav-linkedin:hover {
     transform: translateY(-1px) !important;
 }
+
+/* FINAL INSTAGRAM NAVIGATION */
+.desktop-nav .nav-instagram {
+    position: relative !important;
+    top: 11px !important;
+    align-self: center !important;
+
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    height: 36px !important;
+    padding: 0 16px !important;
+    margin: 0 0 0 6px !important;
+
+    gap: 8px;
+
+    color: #ffffff !important;
+    background: rgba(239, 81, 71, 0.10);
+
+    border: 1px solid rgba(239, 81, 71, 0.65);
+    border-radius: 2px;
+
+    text-decoration: none;
+
+    font: 600 11px var(--display);
+    letter-spacing: .13em;
+
+    box-sizing: border-box;
+}
+
+.desktop-nav .nav-instagram svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.desktop-nav .nav-instagram::after {
+    display: none !important;
+}
+
+.desktop-nav .nav-instagram:hover {
+    color: #ffffff !important;
+    background: var(--red);
+    border-color: var(--red);
+    transform: translateY(-1px) !important;
+}
