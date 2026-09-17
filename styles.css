@@ -5112,4 +5112,54 @@ body {
         justify-content: center;
     }
 }
+/* =========================================================
+   LINKEDIN — NAVIGATION
+   ========================================================= */
 
+.nav-linkedin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    margin-left: 10px;
+    padding: 0 18px;
+
+    height: 40px;
+
+    color: #ffffff;
+    border: 1px solid rgba(239, 81, 71, .65);
+    background: rgba(239, 81, 71, .08);
+
+    text-decoration: none;
+
+    font: 600 11px var(--display);
+    letter-spacing: .14em;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.nav-linkedin-text {
+    color: #ffffff;
+}
+
+.nav-linkedin svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.nav-linkedin:hover {
+    color: #ffffff;
+    background: var(--red);
+    border-color: var(--red);
+    transform: translateY(-1px);
+}
+
+.nav-linkedin:hover .nav-linkedin-text {
+    color: #ffffff;
+}
