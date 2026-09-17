@@ -219,25 +219,6 @@ body {
     padding-left: 16px;
 }
 
-.topbar-linkedin-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--line);
-    border-radius: 2px;
-    color: var(--muted);
-    transition: all .2s ease;
-    text-decoration: none;
-    margin-left: 4px;
-}
-
-.topbar-linkedin-icon:hover {
-    color: #ffffff;
-    border-color: rgba(239, 81, 71, .6);
-    background: rgba(239, 81, 71, .1);
-}
 
 /* METADATA STRIP */
 .topbar-meta-strip {
@@ -5200,4 +5181,47 @@ body {
     background: var(--red);
     border-color: var(--red);
     transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   HEADER LINKEDIN — FINAL POSITION
+   ===================================================== */
+
+.desktop-nav .nav-linkedin {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    height: 36px;
+    padding: 0 16px !important;
+    margin-left: 4px;
+
+    gap: 8px;
+
+    color: #ffffff !important;
+    background: rgba(239, 81, 71, 0.10);
+    border: 1px solid rgba(239, 81, 71, 0.65);
+
+    text-decoration: none;
+    font: 600 11px var(--display);
+    letter-spacing: .13em;
+
+    box-sizing: border-box;
+}
+
+.desktop-nav .nav-linkedin svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.desktop-nav .nav-linkedin::after {
+    display: none !important;
+}
+
+.desktop-nav .nav-linkedin:hover {
+    color: #ffffff !important;
+    background: var(--red);
+    border-color: var(--red);
 }
