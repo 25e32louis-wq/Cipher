@@ -5305,3 +5305,19 @@ body {
     object-fit: contain;
     mix-blend-mode: screen;
 }
+.cipher-original-logo {
+    margin-bottom: 18px;
+}
+
+.cipher-original-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.eyebrow-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
