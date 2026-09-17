@@ -9,8 +9,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="styles.css">
+
+<script>
+    // CIPHER — prevent browser from restoring previous scroll position
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", function () {
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+    });
+
+    window.addEventListener("pageshow", function () {
+        if (!window.location.hash) {
+            setTimeout(function () {
+                window.scrollTo(0, 0);
+            }, 100);
+        }
+    });
+</script>
+
 </head>
+  
 <body>
   <!-- CIPHER INTRO ANIMATION -->
 <div id="cipher-intro">
