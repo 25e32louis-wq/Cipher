@@ -320,100 +320,42 @@
       <!-- FLASH CARDS PERSPECTIVE STACK -->
       <div class="archive-deck-stage" id="archiveDeckStage" role="region" aria-label="Event Archive Perspective Deck">
         <div class="deck-perspective-viewport" id="deckViewport">
-
-          <!-- CARD 01: LUMIÈRE — THE GALA -->
-          <article class="archive-card active" id="card-lumiere" data-index="0" data-archive-id="lumiere" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Open Lumière Gala Archive Dossier">
-            <div class="card-inner">
-              <div class="card-crosshair ch-tl">+</div>
-              <div class="card-crosshair ch-tr">+</div>
-              <div class="card-crosshair ch-bl">+</div>
-              <div class="card-crosshair ch-br">+</div>
-
-              <div class="card-topbar">
-                <span class="card-index">01</span>
-                <span class="card-dossier-tag">DOSSIER // CONFIRMED</span>
-                <time class="card-date" datetime="2025-10-29">29 OCT 2025</time>
-              </div>
-
-              <div class="card-poster-wrap">
-                <img class="card-poster-img" src="lumiere-poster.jpg" alt="Lumière — The Gala stage at Kalam Auditorium" loading="eager">
-                <div class="card-poster-tag">
-                  <span>KALAM AUDITORIUM</span>
-                  <span>50 ASSETS LOGGED</span>
-                </div>
-              </div>
-
-              <div class="card-bottom">
-                <div class="card-info">
-                  <h3 class="card-title">LUMIÈRE — THE GALA</h3>
-                  <span class="card-category">COMMUNITY / BRANCH ENTRY</span>
-                </div>
-                <div class="card-action-glyph" aria-hidden="true">
-                  <span>OPEN DOSSIER</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- CARD 02: PROMPT OPS-2K26 -->
-          <article class="archive-card" id="card-promptops" data-index="1" data-archive-id="promptops" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Open Prompt Ops Archive Dossier">
-            <div class="card-inner">
-              <div class="card-crosshair ch-tl">+</div>
-              <div class="card-crosshair ch-tr">+</div>
-              <div class="card-crosshair ch-bl">+</div>
-              <div class="card-crosshair ch-br">+</div>
-
-              <div class="card-topbar">
-                <span class="card-index">02</span>
-                <span class="card-dossier-tag">DOSSIER // CONFIRMED</span>
-                <time class="card-date" datetime="2026-03-25">25 MAR 2026</time>
-              </div>
-
-              <div class="card-poster-wrap">
-                <img class="card-poster-img" src="prompt-ops-poster.jpg" alt="Prompt Ops 2K26 AI Competition Poster" loading="lazy">
-                <div class="card-poster-tag">
-                  <span>AGENTBLAZER × CIPHER</span>
-                  <span>AI SPEC PROTOCOL</span>
-                </div>
-              </div>
-
-              <div class="card-bottom">
-                <div class="card-info">
-                  <h3 class="card-title">PROMPT OPS–2K26</h3>
-                  <span class="card-category">AI / TECHNICAL COMPETITION</span>
-                </div>
-                <div class="card-action-glyph" aria-hidden="true">
-                  <span>OPEN DOSSIER</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </article>
-
+          <!-- Dynamic cards rendered from events_data.js -->
         </div>
 
-        <!-- DECK NAVIGATION BAR -->
-        <div class="deck-controls">
-          <button class="deck-nav-btn" id="deckPrevBtn" type="button" aria-label="Previous Archive Card">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            <span>PREV</span>
-          </button>
+        <!-- CONTROLS & ARCHIVE INDEX -->
+        <div class="archive-controls-wrapper">
+          <div class="deck-controls">
+            <button class="deck-nav-btn" id="deckPrevBtn" type="button" aria-label="Previous Archive Card">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>PREV</span>
+            </button>
 
-          <div class="deck-indicator">
-            <span class="deck-cur" id="deckCurIdx">01</span>
-            <span class="deck-sep">/</span>
-            <span class="deck-total">02</span>
+            <div class="deck-indicator">
+              <span class="deck-cur" id="deckCurIdx">01</span>
+              <span class="deck-sep">/</span>
+              <span class="deck-total" id="deckTotalCount">19</span>
+            </div>
+
+            <button class="deck-nav-btn" id="deckNextBtn" type="button" aria-label="Next Archive Card">
+              <span>NEXT</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </div>
 
-          <button class="deck-nav-btn" id="deckNextBtn" type="button" aria-label="Next Archive Card">
-            <span>NEXT</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
+          <!-- ARCHIVE INDEX -->
+          <div class="archive-index-panel" id="archiveIndexPanel">
+            <div class="archive-index-top">
+              <div class="index-title-block">
+                <span class="index-kicker">ARCHIVE INDEX</span>
+                <span class="index-subtitle">// OFFICIAL CIPHER DIRECTORY</span>
+              </div>
+              <span class="index-meta" id="indexMetaCount">[19 ENTRIES LOGGED]</span>
+            </div>
+            <div class="archive-index-grid" id="archiveIndexList" role="list">
+              <!-- Rendered dynamically from window.CIPHER_EVENTS -->
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -668,6 +610,10 @@
 
           <div class="dossier-spec-plate">
             <div class="spec-row">
+              <span class="spec-label">VENUE</span>
+              <strong class="spec-val" id="dossierVenueText">Kalam Auditorium, SJEC</strong>
+            </div>
+            <div class="spec-row">
               <span class="spec-label">DEPARTMENT</span>
               <strong class="spec-val">COMPUTER SCIENCE & ENGINEERING</strong>
             </div>
@@ -705,13 +651,17 @@
             <!-- Stats items injected via app.js -->
           </div>
 
-          <!-- GALLERY CTA -->
+          <!-- GALLERY CTA & OFFICIAL LINK -->
           <div class="dossier-cta-bar" id="dossierCtaBar">
-            <button class="btn-dossier-gallery" id="dossierGalleryBtn" type="button">
+            <button class="btn-dossier-gallery" id="dossierGalleryBtn" type="button" style="display: none;">
               <span class="gallery-btn-text">VIEW FULL GALLERY</span>
               <span class="gallery-btn-count" id="dossierGalleryCount">[50 PHOTOS]</span>
               <span class="gallery-btn-arrow">→</span>
             </button>
+            <a class="btn-dossier-official" id="dossierOfficialLink" href="#" target="_blank" rel="noopener noreferrer" style="display: none;">
+              <span>OFFICIAL SJEC RECORD</span>
+              <span class="official-arrow">↗</span>
+            </a>
           </div>
         </div>
       </div>
@@ -852,8 +802,9 @@
     </div>
   </div>
 
-  <!-- Framer Motion / Motion One engine -->
+  <!-- Data, Gallery and Application engines -->
   <script src="https://cdn.jsdelivr.net/npm/motion@11.11.17/dist/motion.js"></script>
+  <script src="events_data.js"></script>
   <script src="lumiere_gallery.js"></script>
   <script src="app.js"></script>
 </body>

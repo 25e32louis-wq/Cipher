@@ -1,0 +1,737 @@
+[
+  {
+    "id": "lumiere",
+    "archiveNumber": "01",
+    "title": "LUMIÈRE — THE GALA",
+    "date": "29 OCT 2025",
+    "isoDate": "2025-10-29",
+    "category": "Community / Branch Entry",
+    "badge": "KALAM AUDITORIUM",
+    "subtitle": "50 ASSETS LOGGED",
+    "venue": "Kalam Auditorium, SJEC",
+    "coverImage": "lumiere-poster.jpg",
+    "shortDescription": "The Department of Computer Science and Engineering held its branch entry programme \"Lumière – The Gala\" on 29 October 2025 at the Kalam Auditorium.",
+    "description": [
+      "The Department of Computer Science and Engineering held its branch entry programme \"Lumière – The Gala\" on 29 October 2025 at the Kalam Auditorium.",
+      "Organised by the Cipher Association, the programme welcomed first-year students into the department through the theme \"Where Glam Meets Glow.\"",
+      "The venue featured coordinated red, gold and black décor, floral arrangements, illuminated panels and a central Lumière backdrop.",
+      "The event encouraged interaction among students and showcased the role of Cipher in building an active student community beyond academics."
+    ],
+    "stats": [
+      {
+        "label": "VENUE",
+        "val": "Kalam Auditorium"
+      },
+      {
+        "label": "THEME",
+        "val": "Where Glam Meets Glow"
+      },
+      {
+        "label": "ORGANISED BY",
+        "val": "CIPHER Association"
+      },
+      {
+        "label": "AUDIENCE",
+        "val": "First-Year CSE Cohort"
+      },
+      {
+        "label": "PURPOSE",
+        "val": "Community & Student Onboarding"
+      }
+    ],
+    "hasGallery": true,
+    "galleryCountText": "[50 PHOTOS]",
+    "officialUrl": "https://sjec.ac.in/cipher"
+  },
+  {
+    "id": "promptops",
+    "archiveNumber": "02",
+    "title": "PROMPT OPS–2K26",
+    "date": "25 MAR 2026",
+    "isoDate": "2026-03-25",
+    "category": "AI / Technical Competition",
+    "badge": "AGENTBLAZER × CIPHER",
+    "subtitle": "AI SPEC PROTOCOL",
+    "venue": "Computer Science Labs, SJEC",
+    "coverImage": "prompt-ops-poster.jpg",
+    "shortDescription": "Organised jointly by AgentBlazer Club and Cipher under the guidance of Ms. Nisha J Roche, Ms. Jaishma K and HOD Dr. Melwyn D'Souza.",
+    "description": [
+      "Organised jointly by AgentBlazer Club and Cipher under the guidance of Ms. Nisha J Roche, Ms. Jaishma K and HOD Dr. Melwyn D'Souza.",
+      "Track 1 challenged first-year students in invitation generation, logo recreation and image recreation using AI modalities.",
+      "Track 2 tested advanced JSON conversion, Python debugging and Gemini AI security prompt extraction.",
+      "The competition promoted prompt engineering, AI literacy and practical problem solving across emerging LLM paradigms."
+    ],
+    "stats": [
+      {
+        "label": "STRUCTURE",
+        "val": "2 Specialized Tracks"
+      },
+      {
+        "label": "CHALLENGES",
+        "val": "Prompt Eng · JSON · Python"
+      },
+      {
+        "label": "AI DEFENSE",
+        "val": "Gemini Security Challenge"
+      },
+      {
+        "label": "ORGANISERS",
+        "val": "AgentBlazer Club × Cipher"
+      },
+      {
+        "label": "FACULTY GUIDES",
+        "val": "Ms. Nisha, Ms. Jaishma, Dr. Melwyn"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[PROTOCOL LOGGED]",
+    "officialUrl": "https://sjec.ac.in/cipher"
+  },
+  {
+    "id": "applied-machine-learning",
+    "archiveNumber": "03",
+    "title": "APPLIED MACHINE LEARNING",
+    "date": "27 MAR 2024",
+    "isoDate": "2024-03-27",
+    "category": "Technical Workshop",
+    "badge": "IE(I) CHAPTER × CSE",
+    "subtitle": "DATA SCIENCE & ML",
+    "venue": "CSE Department, SJEC",
+    "coverImage": "public/events/1739897385_67b4ba299a615.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739897385_67b4ba299a615.jpg",
+    "shortDescription": "The Department of Computer Science and Engineering, in association with the IE(I) Chapter, organized a workshop on “Applied Machine Learning” on March 27,...",
+    "description": [
+      "The Department of Computer Science and Engineering, in association with the IE(I) Chapter, organized a workshop on “Applied Machine Learning” on March 27, 2024. VIII semester CSE students and CSE & ICBS staff participated in the session. Ms. Pramila R. M., Assistant Professor, Data Science Department at CHIRST (Deemed to be University), Pune, was the resource person."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSON",
+        "val": "Ms. Pramila R. M. (CHRIST Univ)"
+      },
+      {
+        "label": "COLLABORATION",
+        "val": "IE(I) Chapter × CSE"
+      },
+      {
+        "label": "TARGET AUDIENCE",
+        "val": "VIII Sem CSE & ICBS Staff"
+      },
+      {
+        "label": "FOCUS AREA",
+        "val": "Applied Machine Learning Models"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/applied-machine-learning"
+  },
+  {
+    "id": "industrial-visit-1",
+    "archiveNumber": "04",
+    "title": "INDUSTRIAL VISIT — SAP LAB & SURYA SOFTWARE",
+    "date": "28–29 JUN 2024",
+    "isoDate": "2024-06-28",
+    "category": "Industrial Immersion",
+    "badge": "SAP LABS & SURYA",
+    "subtitle": "78 STUDENTS PARTICIPATED",
+    "venue": "Bengaluru Tech Corridor",
+    "coverImage": "public/events/1739897321_67b4b9e9cb292.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739897321_67b4b9e9cb292.jpg",
+    "shortDescription": "A two-day industrial visit was organized for CSE VI semester A & B section students to SAP Lab and Surya Software Company, Bangalore, on June 28 and 29, 2024....",
+    "description": [
+      "A two-day industrial visit was organized for CSE VI semester A & B section students to SAP Lab and Surya Software Company, Bangalore, on June 28 and 29, 2024. Dr. Ramananda H.S., Professor, Mathematics and Dean of Student Welfare, Dr. Venkatesh Babu K.P., Assistant Professor, Mathematics Department, Ms. Vanisha P. Santhmayor, and Ms. Anusha S., Assistant ProfessorS, CSE Department, accompanied the students. A total of 78 students attended the industrial visit."
+    ],
+    "stats": [
+      {
+        "label": "DESTINATION",
+        "val": "SAP Lab & Surya Software, BLR"
+      },
+      {
+        "label": "DELEGATION",
+        "val": "78 Students (VI Sem A & B)"
+      },
+      {
+        "label": "FACULTY ESCORTS",
+        "val": "Dr. Ramananda, Dr. Venkatesh, Ms. Vanisha, Ms. Anusha"
+      },
+      {
+        "label": "DURATION",
+        "val": "Two-Day Industry Exposure"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/industrial-visit-1"
+  },
+  {
+    "id": "latex-tool",
+    "archiveNumber": "05",
+    "title": "LATEX TOOL",
+    "date": "28–29 JUN 2024",
+    "isoDate": "2024-06-28",
+    "category": "Hands-On Workshop",
+    "badge": "ISTE × CSE DEPT",
+    "subtitle": "120 STUDENTS ENROLLED",
+    "venue": "Department Computer Labs, SJEC",
+    "coverImage": "public/events/1739897200_67b4b97035197.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739897200_67b4b97035197.jpg",
+    "shortDescription": "The Department of Computer Science & Engineering, in association with ISTE, conducted a workshop on “LaTeX Tool” on June 28 and 29, 2024. Dr. Harivinod N. and...",
+    "description": [
+      "The Department of Computer Science & Engineering, in association with ISTE, conducted a workshop on “LaTeX Tool” on June 28 and 29, 2024. Dr. Harivinod N. and Dr. Shirha H. S. were the resource persons. A total of 120 students participated in the workshop."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSONS",
+        "val": "Dr. Harivinod N. & Dr. Shirha H. S."
+      },
+      {
+        "label": "COLLABORATION",
+        "val": "ISTE Chapter × CSE"
+      },
+      {
+        "label": "ATTENDANCE",
+        "val": "120 Registered Students"
+      },
+      {
+        "label": "DOMAIN",
+        "val": "Technical Typesetting & Research Papers"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/latex-tool"
+  },
+  {
+    "id": "robotic-process-automation-design-and-development-using-uipath",
+    "archiveNumber": "06",
+    "title": "ROBOTIC PROCESS AUTOMATION DESIGN & DEVELOPMENT USING UIPATH",
+    "date": "22 JUN 2024",
+    "isoDate": "2024-06-22",
+    "category": "Hands-On Workshop",
+    "badge": "CSI × NOVIGO SOLUTIONS",
+    "subtitle": "49 STUDENTS DEPLOYED",
+    "venue": "CSE Computing Facility, SJEC",
+    "coverImage": "public/events/1739897171_67b4b953f0598.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739897171_67b4b953f0598.jpg",
+    "shortDescription": "The Department of Computer Science & Engineering, in association with the Computer Society of India (CSI), conducted a hands-on workshop on \"Robotic Process...",
+    "description": [
+      "The Department of Computer Science & Engineering, in association with the Computer Society of India (CSI), conducted a hands-on workshop on \"Robotic Process Automation Design and Development Using UiPath\" on June 22, 2024, for all interested faculty and students of CSE-SJEC. Mr. Lohith B., Automation Analyst at Novigo Solutions Pvt. Ltd., Mangaluru, served as the resource person for the event. A total of 49 students attended the workshop."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSON",
+        "val": "Mr. Lohith B. (Novigo Solutions)"
+      },
+      {
+        "label": "COLLABORATION",
+        "val": "Computer Society of India (CSI)"
+      },
+      {
+        "label": "ATTENDANCE",
+        "val": "49 Faculty & Students"
+      },
+      {
+        "label": "TOOLCHAIN",
+        "val": "UiPath Studio Automation"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/robotic-process-automation-design-and-development-using-uipath"
+  },
+  {
+    "id": "hackto-future-20",
+    "archiveNumber": "07",
+    "title": "HACKTO FUTURE 2.0",
+    "date": "19–20 FEB 2024",
+    "isoDate": "2024-02-19",
+    "category": "36-Hour Hackathon",
+    "badge": "T&P CELL × CSE & ICBS",
+    "subtitle": "NATIONAL LEVEL SPRINT",
+    "venue": "SJEC Campus, Vamanjoor",
+    "coverImage": "public/events/1739894972_67b4b0bc26ea8.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739894972_67b4b0bc26ea8.jpg",
+    "shortDescription": "The Department of Training & Placement Cell, in association with the Department of CSE and ICBS, organized HackTO Future 20, a 36-hour hackathon, on February...",
+    "description": [
+      "The Department of Training & Placement Cell, in association with the Department of CSE and ICBS, organized HackTO Future 20, a 36-hour hackathon, on February 19 and 20, 2024"
+    ],
+    "stats": [
+      {
+        "label": "FORMAT",
+        "val": "36-Hour Continuous Hackathon"
+      },
+      {
+        "label": "ORGANISERS",
+        "val": "Training & Placement Cell × CSE"
+      },
+      {
+        "label": "DISCIPLINES",
+        "val": "Full-Stack, AI, Systems, Web3"
+      },
+      {
+        "label": "OBJECTIVE",
+        "val": "Rapid Prototyping & Industry Problem Solving"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/hackto-future-20"
+  },
+  {
+    "id": "how-to-win-at-the-sport-of-programming",
+    "archiveNumber": "08",
+    "title": "HOW TO WIN AT THE SPORT OF PROGRAMMING",
+    "date": "06 OCT 2023",
+    "isoDate": "2023-10-06",
+    "category": "Competitive Coding",
+    "badge": "GOOGLE DSC × CSE",
+    "subtitle": "ALGORITHMIC STRATEGY",
+    "venue": "SJEC Campus, Vamanjoor",
+    "coverImage": "public/events/1739894882_67b4b0624c66b.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739894882_67b4b0624c66b.jpg",
+    "shortDescription": "Google DSC from CSE-SJEC conducted a session on “How to Win at the Sport of Programming” on October 6, 2023, for SJEC students. Mr. Shaun Mathew Crasta was the...",
+    "description": [
+      "Google DSC from CSE-SJEC conducted a session on “How to Win at the Sport of Programming” on October 6, 2023, for SJEC students. Mr. Shaun Mathew Crasta was the resource person."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSON",
+        "val": "Mr. Shaun Mathew Crasta"
+      },
+      {
+        "label": "ORGANISERS",
+        "val": "Google DSC × CSE-SJEC"
+      },
+      {
+        "label": "TOPICS",
+        "val": "CP Optimization, Big-O, Contest Tactics"
+      },
+      {
+        "label": "AUDIENCE",
+        "val": "SJEC Competitive Programmers"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/how-to-win-at-the-sport-of-programming"
+  },
+  {
+    "id": "introduction-to-google-crowdsource",
+    "archiveNumber": "09",
+    "title": "INTRODUCTION TO GOOGLE CROWDSOURCE",
+    "date": "05 OCT 2023",
+    "isoDate": "2023-10-05",
+    "category": "Technical Seminar",
+    "badge": "GOOGLE DSC COMMUNITY",
+    "subtitle": "AI DATA TRAINING",
+    "venue": "SJEC Campus, Vamanjoor",
+    "coverImage": "public/events/1739894840_67b4b03866a9f.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739894840_67b4b03866a9f.jpg",
+    "shortDescription": "Google DSC from CSE-SJEC conducted a session on “Introduction to Google Crowdsource” on October 5, 2023, for SJEC students. Ms. Sarita Behera, Crowdsource...",
+    "description": [
+      "Google DSC from CSE-SJEC conducted a session on “Introduction to Google Crowdsource” on October 5, 2023, for SJEC students. Ms. Sarita Behera, Crowdsource Community Manager, was the resource person."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSON",
+        "val": "Ms. Sarita Behera (Google Crowdsource)"
+      },
+      {
+        "label": "ORGANISERS",
+        "val": "Google DSC from CSE-SJEC"
+      },
+      {
+        "label": "FOCUS",
+        "val": "Open Machine Learning Data Contribution"
+      },
+      {
+        "label": "COMMUNITY",
+        "val": "Global AI Dataset Diversity"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/introduction-to-google-crowdsource"
+  },
+  {
+    "id": "educational-session-on-github",
+    "archiveNumber": "10",
+    "title": "EDUCATIONAL SESSION ON GITHUB",
+    "date": "18–20 OCT 2023",
+    "isoDate": "2023-10-18",
+    "category": "Developer Tooling",
+    "badge": "PEER-LED WORKSHOP",
+    "subtitle": "FIRST-YEAR ORIENTATION",
+    "venue": "CSE Department Labs, SJEC",
+    "coverImage": "public/events/1739894811_67b4b01b006f1.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739894811_67b4b01b006f1.jpg",
+    "shortDescription": "An educational session on GitHub was conducted from October 18 to 20, 2023, for the first-year SJEC students. The resource persons for the session were Mr....",
+    "description": [
+      "An educational session on GitHub was conducted from October 18 to 20, 2023, for the first-year SJEC students. The resource persons for the session were Mr. Vyasa M. Nayak, Ms. Chairs Pinto, Mr. Joywin Bennis, Mr. Arshith, Mr. Pratham Bhat, Mr. Omkar, and Mr. Joshuva, students of the IV semester CSE."
+    ],
+    "stats": [
+      {
+        "label": "STUDENT MENTORS",
+        "val": "Vyasa, Chairs, Joywin, Arshith, Pratham, Omkar, Joshuva"
+      },
+      {
+        "label": "AUDIENCE",
+        "val": "First-Year SJEC Cohort"
+      },
+      {
+        "label": "CORE SKILLS",
+        "val": "Git CLI, Branching, PRs, Open Source"
+      },
+      {
+        "label": "DURATION",
+        "val": "3-Day Hands-On Lab Sessions"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/educational-session-on-github"
+  },
+  {
+    "id": "industrial-visit",
+    "archiveNumber": "11",
+    "title": "INDUSTRIAL VISIT — NESTSOFT TECHNOLOGIES",
+    "date": "20–21 JUN 2024",
+    "isoDate": "2024-06-20",
+    "category": "Industrial Immersion",
+    "badge": "KOCHI TECH CORRIDOR",
+    "subtitle": "36 STUDENTS ATTENDED",
+    "venue": "Nestsoft Technologies & Kanan Devan Hills",
+    "coverImage": "public/events/1739893784_67b4ac1811401.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739893784_67b4ac1811401.jpg",
+    "shortDescription": "Two-day Industrial Visit was organized for CSE VI semester C section students, to Kochi, Nestsoft Technologies and Kanan Devan Hills Plantations Company on...",
+    "description": [
+      "Two-day Industrial Visit was organized for CSE VI semester C section students, to Kochi, Nestsoft Technologies and Kanan Devan Hills Plantations Company on 20th and 21st June 2024. Dr Vincent Crasta, Professor of Physics Dept. and Dr Sunitha Guruprasad Associate Professor, CSE Dept. accompanied the students. 36 students attended the industrial visit"
+    ],
+    "stats": [
+      {
+        "label": "DESTINATION",
+        "val": "Nestsoft Technologies & KDHP, Kerala"
+      },
+      {
+        "label": "DELEGATION",
+        "val": "36 Students (VI Sem C Section)"
+      },
+      {
+        "label": "FACULTY LEADS",
+        "val": "Dr. Vincent Crasta & Dr. Sunitha Guruprasad"
+      },
+      {
+        "label": "FOCUS",
+        "val": "Software Development & Industrial Automation"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/industrial-visit"
+  },
+  {
+    "id": "udaan-mock-interview",
+    "archiveNumber": "12",
+    "title": "UDAAN MOCK INTERVIEW",
+    "date": "06–13 JUL 2024",
+    "isoDate": "2024-07-06",
+    "category": "Career Preparation",
+    "badge": "UDAAN // PLACEMENT",
+    "subtitle": "INDUSTRY INTERVIEW SIMULATION",
+    "venue": "Placement Cell & CSE Dept, SJEC",
+    "coverImage": "public/events/1739893739_67b4abeb4a326.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739893739_67b4abeb4a326.jpg",
+    "shortDescription": "Department of Computer Science & Engineering in associate with Placement and Training department organized UDAAN Mock interview to prefinal year students of...",
+    "description": [
+      "Department of Computer Science & Engineering in associate with Placement and Training department organized UDAAN Mock interview to prefinal year students of CSE department on 06th July 2024, 12th & 13th July 2024. Nithin Kumar Heraje, Mr Praveena Kumar,Mr Sharan,Mr Shathisha V, Mr Sheethal Kumar Y M, Ms Soujanya,Mr M Prajval, Mr Shreyar K V, Mr Quenton Rebello, Ms Samridhi P S were the resource person for the event."
+    ],
+    "stats": [
+      {
+        "label": "TARGET",
+        "val": "Pre-Final Year CSE Students"
+      },
+      {
+        "label": "PANELISTS",
+        "val": "Nithin Heraje, Praveena, Sharan, Shathisha, Sheethal, Soujanya, Prajval, Shreyar, Quenton, Samridhi"
+      },
+      {
+        "label": "ROUNDS",
+        "val": "Technical Architecture & HR Behavioral"
+      },
+      {
+        "label": "ORGANISERS",
+        "val": "CSE Department × Placement & Training"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/udaan-mock-interview"
+  },
+  {
+    "id": "freshers-onboarding-programme",
+    "archiveNumber": "13",
+    "title": "FRESHERS ONBOARDING PROGRAMME",
+    "date": "15 MAR 2024",
+    "isoDate": "2024-03-15",
+    "category": "Community Onboarding",
+    "badge": "SCEPTIX CLUB × CSE",
+    "subtitle": "STUDENT COMMUNITY",
+    "venue": "SJEC Campus, Vamanjoor",
+    "coverImage": "public/events/1739893664_67b4aba005a90.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739893664_67b4aba005a90.jpg",
+    "shortDescription": "Sceptix club from CSE-SJEC conducted a session on \"Freshers Onboarding Prograamme\" on 15 March 2024. All sceptix club members participated in the session.",
+    "description": [
+      "Sceptix club from CSE-SJEC conducted a session on \"Freshers Onboarding Prograamme\" on 15 March 2024. All sceptix club members participated in the session."
+    ],
+    "stats": [
+      {
+        "label": "ORGANISERS",
+        "val": "Sceptix Club from CSE-SJEC"
+      },
+      {
+        "label": "TARGET",
+        "val": "First-Year Computer Science Students"
+      },
+      {
+        "label": "PROGRAMME",
+        "val": "Academic Mentorship & Technical Culture"
+      },
+      {
+        "label": "PARTICIPATION",
+        "val": "All Sceptix Club Members & Freshers"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/freshers-onboarding-programme"
+  },
+  {
+    "id": "projects-funded-by-kscst",
+    "archiveNumber": "14",
+    "title": "PROJECTS FUNDED BY KSCST",
+    "date": "ACADEMIC YEAR 2023–24",
+    "isoDate": "2024-04-01",
+    "category": "Research & Grants",
+    "badge": "KSCST STATE GRANT",
+    "subtitle": "INNOVATION IN ACTION",
+    "venue": "CSE Research Facility, SJEC",
+    "coverImage": "public/events/1739893536_67b4ab20a99a6.png",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739893536_67b4ab20a99a6.png",
+    "shortDescription": "Promotional Email Unsubscription Using Web Extension",
+    "description": [
+      "Promotional Email Unsubscription Using Web Extension",
+      "Bidirectional Communication System for Deaf-Blind Individuals"
+    ],
+    "stats": [
+      {
+        "label": "GRANTING BODY",
+        "val": "Karnataka State Council for Science & Technology"
+      },
+      {
+        "label": "PROJECT 1",
+        "val": "Promotional Email Unsubscription Web Extension"
+      },
+      {
+        "label": "PROJECT 2",
+        "val": "Bidirectional Comm System for Deaf-Blind"
+      },
+      {
+        "label": "IMPACT",
+        "val": "Assistive Technologies & Web Privacy"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/projects-funded-by-kscst"
+  },
+  {
+    "id": "generative-ai-tools-for-research",
+    "archiveNumber": "15",
+    "title": "GENERATIVE AI TOOLS FOR RESEARCH",
+    "date": "19 JUL 2024",
+    "isoDate": "2024-07-19",
+    "category": "Faculty & Staff Workshop",
+    "badge": "RESEARCH METHODOLOGY",
+    "subtitle": "17 FACULTY PARTICIPATED",
+    "venue": "CSE Department, SJEC",
+    "coverImage": "public/events/1739893359_67b4aa6f11fa7.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739893359_67b4aa6f11fa7.jpg",
+    "shortDescription": "“Generative AI tools for Research”, on 19th July 2024, Dr Harivinod N Associate Professor, CSE were the resource persons 17 staff participated in the workshop.",
+    "description": [
+      "“Generative AI tools for Research”, on 19th July 2024, Dr Harivinod N Associate Professor, CSE were the resource persons 17 staff participated in the workshop."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSON",
+        "val": "Dr. Harivinod N. (Associate Professor, CSE)"
+      },
+      {
+        "label": "AUDIENCE",
+        "val": "17 Academic Faculty & Research Staff"
+      },
+      {
+        "label": "FOCUS",
+        "val": "Generative AI for Literature Review & Synthesis"
+      },
+      {
+        "label": "ETHICS",
+        "val": "Academic Integrity & Proper AI Citation"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/generative-ai-tools-for-research"
+  },
+  {
+    "id": "introduction-to-blockchain-beginners-worskhop-on-solidity-programming",
+    "archiveNumber": "16",
+    "title": "INTRODUCTION TO BLOCKCHAIN: BEGINNER'S WORKSHOP ON SOLIDITY PROGRAMMING",
+    "date": "13 JUL 2024",
+    "isoDate": "2024-07-13",
+    "category": "Web3 & Blockchain",
+    "badge": "CIPHER × THANIYA TECH",
+    "subtitle": "105 STUDENTS TRAINED",
+    "venue": "CSE Computing Labs, SJEC",
+    "coverImage": "public/events/1739893323_67b4aa4babb93.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739893323_67b4aa4babb93.jpg",
+    "shortDescription": "Department of Computer Science & Engineering in associate with CIPHER-CSE student association conducted a hands-on session on “Introduction to Blockchain:...",
+    "description": [
+      "Department of Computer Science & Engineering in associate with CIPHER-CSE student association conducted a hands-on session on “Introduction to Blockchain: Beginner’s Worskhop on Solidity programming”, on 13th July 2024, Mr Shailesh Shetty S, Director, Thaniya Technologies were the resource persons 105 students participated in the workshop."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSON",
+        "val": "Mr. Shailesh Shetty S. (Director, Thaniya Tech)"
+      },
+      {
+        "label": "ORGANISERS",
+        "val": "CIPHER-CSE Student Association"
+      },
+      {
+        "label": "ATTENDANCE",
+        "val": "105 Registered Participants"
+      },
+      {
+        "label": "TOOLCHAIN",
+        "val": "Solidity, Remix IDE, Smart Contracts"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/introduction-to-blockchain-beginners-worskhop-on-solidity-programming"
+  },
+  {
+    "id": "star-uml",
+    "archiveNumber": "17",
+    "title": "STAR UML",
+    "date": "03 & 07 FEB 2024",
+    "isoDate": "2024-02-03",
+    "category": "Software Engineering",
+    "badge": "SYSTEMS ARCHITECTURE",
+    "subtitle": "V SEMESTER CSE COHORT",
+    "venue": "Department Computer Labs, SJEC",
+    "coverImage": "public/events/1739892981_67b4a8f578489.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739892981_67b4a8f578489.jpg",
+    "shortDescription": "A hands-on session on “Star UML” was conducted on 3rd & 7th February 2024, for V semester CSE students. Dr Hareesh B, HOD MCA was the resource person.",
+    "description": [
+      "A hands-on session on “Star UML” was conducted on 3rd & 7th February 2024, for V semester CSE students. Dr Hareesh B, HOD MCA was the resource person."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSON",
+        "val": "Dr. Hareesh B. (HOD, MCA Department)"
+      },
+      {
+        "label": "TARGET AUDIENCE",
+        "val": "V Semester CSE Students"
+      },
+      {
+        "label": "FOCUS",
+        "val": "UML Diagramming, Class Modeling, State Machines"
+      },
+      {
+        "label": "PRACTICAL LAB",
+        "val": "Hands-on StarUML Software Specifications"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/star-uml"
+  },
+  {
+    "id": "generative-ai-grafting-custom-solutions-for-your-needs-using-open-ai",
+    "archiveNumber": "18",
+    "title": "GENERATIVE AI — CRAFTING CUSTOM SOLUTIONS USING OPENAI",
+    "date": "03 FEB 2024",
+    "isoDate": "2024-02-03",
+    "category": "AI Development",
+    "badge": "CIPHER & CSI × AYKAN",
+    "subtitle": "III SEMESTER CSE WORKSHOP",
+    "venue": "CSE Computing Labs, SJEC",
+    "coverImage": "public/events/1739892946_67b4a8d2f28a0.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739892946_67b4a8d2f28a0.jpg",
+    "shortDescription": "Department of Computer Science and Engineering in association with Cipher & CSI organized a workshop on “Generative AI: Grafting Custom Solutions For your...",
+    "description": [
+      "Department of Computer Science and Engineering in association with Cipher & CSI organized a workshop on “Generative AI: Grafting Custom Solutions For your Needs using open AI” on 3 February 2024 for III semester CSE Students. Mr Vinod Kumar, CEO, Mr Naveen Bhat, Co-Founder &CTO, and Ms Kavya, Technical Lead Aykan Technology Mangalore were the resource persons."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSONS",
+        "val": "Vinod Kumar (CEO), Naveen Bhat (CTO), Kavya (Tech Lead, Aykan)"
+      },
+      {
+        "label": "ORGANISERS",
+        "val": "Cipher & CSI Chapter SJEC"
+      },
+      {
+        "label": "CORE TOPIC",
+        "val": "Custom Solutions & API Integration via OpenAI"
+      },
+      {
+        "label": "AUDIENCE",
+        "val": "III Semester CSE Students"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/generative-ai-grafting-custom-solutions-for-your-needs-using-open-ai"
+  },
+  {
+    "id": "reactjs-and-nodejs-workshop",
+    "archiveNumber": "19",
+    "title": "REACT.JS & NODE.JS WORKSHOP",
+    "date": "21 NOV 2024",
+    "isoDate": "2024-11-21",
+    "category": "Full-Stack Development",
+    "badge": "CIPHER × ALUMNI SPRINT",
+    "subtitle": "III YEAR CSE B & C SECTION",
+    "venue": "Department Computer Labs, SJEC",
+    "coverImage": "public/events/1739892887_67b4a89754506.jpg",
+    "remoteCoverImage": "https://sjec.ac.in/storage/page_activities/1739892887_67b4a89754506.jpg",
+    "shortDescription": "Department of Computer Science & Engineering in associate with CIPHER- CSE Student Association SJEC organized a Workshop on “React.js and Node.js\" on...",
+    "description": [
+      "Department of Computer Science & Engineering in associate with CIPHER- CSE Student Association SJEC organized a Workshop on “React.js and Node.js\" on 21/11/2024 (Thursday) from 9:00 AM to 4:00 PM for third-year CSE B and C Section students of SJEC. Mr. Anish Shobith, Alumnus 2024 batch served as resource person for the event."
+    ],
+    "stats": [
+      {
+        "label": "RESOURCE PERSON",
+        "val": "Mr. Anish Shobith (Alumnus, 2024 Batch)"
+      },
+      {
+        "label": "ORGANISERS",
+        "val": "CIPHER-CSE Student Association"
+      },
+      {
+        "label": "SCHEDULE",
+        "val": "9:00 AM – 4:00 PM Intensive Sprint"
+      },
+      {
+        "label": "STACK",
+        "val": "React.js Component Arch + Node.js REST APIs"
+      }
+    ],
+    "hasGallery": false,
+    "galleryCountText": "[ARCHIVED]",
+    "officialUrl": "https://sjec.ac.in/cipher/activity/reactjs-and-nodejs-workshop"
+  }
+]

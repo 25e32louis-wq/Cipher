@@ -88,42 +88,154 @@
   }));
 
   // =========================================================
-  // EVENT ARCHIVE — FLASH CARDS PERSPECTIVE STACK & DOSSIER
+  // DATA-DRIVEN EVENT ARCHIVE & FLASH CARDS PERSPECTIVE STACK
   // =========================================================
 
   const archiveDeckStage = qs('#archiveDeckStage');
-  const archiveCards = qsa('.archive-card');
+  const deckViewport = qs('#deckViewport');
   const deckCurIdx = qs('#deckCurIdx');
+  const deckTotalCount = qs('#deckTotalCount');
   const deckPrevBtn = qs('#deckPrevBtn');
   const deckNextBtn = qs('#deckNextBtn');
+  const archiveIndexList = qs('#archiveIndexList');
+  const indexMetaCount = qs('#indexMetaCount');
+
+  // Load events from window.CIPHER_EVENTS
+  const events = window.CIPHER_EVENTS || [];
+  const totalCards = events.length;
 
   let activeCardIndex = 0;
-  const totalCards = archiveCards.length;
 
+  if (deckTotalCount) deckTotalCount.textContent = String(totalCards).padStart(2, '0');
+  if (indexMetaCount) indexMetaCount.textContent = `[${totalCards} ENTRIES LOGGED]`;
+
+  // Render Flash Cards into #deckViewport dynamically
+  if (deckViewport && events.length > 0) {
+    deckViewport.innerHTML = events.map((ev, idx) => `
+      <article class="archive-card ${idx === 0 ? 'card-active active' : 'card-hidden'}" 
+               id="card-${ev.id}" 
+               data-index="${idx}" 
+               data-archive-id="${ev.id}" 
+               tabindex="0" 
+               role="button" 
+               aria-haspopup="dialog" 
+               aria-expanded="${idx === 0 ? 'true' : 'false'}" 
+               aria-label="Open ${ev.title} Archive Dossier">
+        <div class="card-inner">
+          <div class="card-crosshair ch-tl">+</div>
+          <div class="card-crosshair ch-tr">+</div>
+          <div class="card-crosshair ch-bl">+</div>
+          <div class="card-crosshair ch-br">+</div>
+
+          <div class="card-topbar">
+            <span class="card-index">${ev.archiveNumber}</span>
+            <span class="card-dossier-tag">DOSSIER // CONFIRMED</span>
+            <time class="card-date" datetime="${ev.isoDate || ''}">${ev.date}</time>
+          </div>
+
+          <div class="card-poster-wrap">
+            <img class="card-poster-img" 
+                 src="${ev.coverImage}" 
+                 alt="${ev.title}" 
+                 loading="${idx < 3 ? 'eager' : 'lazy'}" 
+                 onerror="if(this.src!=='${ev.remoteCoverImage}' && '${ev.remoteCoverImage}'){this.src='${ev.remoteCoverImage}'}">
+            <div class="card-poster-tag">
+              <span>${ev.badge || 'SJEC CSE'}</span>
+              <span>${ev.subtitle || 'ARCHIVED'}</span>
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <div class="card-info">
+              <h3 class="card-title">${ev.title}</h3>
+              <span class="card-category">${ev.category}</span>
+            </div>
+            <div class="card-action-glyph" aria-hidden="true">
+              <span>OPEN DOSSIER</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  // Render Archive Index items into #archiveIndexList dynamically
+  if (archiveIndexList && events.length > 0) {
+    archiveIndexList.innerHTML = events.map((ev, idx) => `
+      <button class="archive-index-item ${idx === 0 ? 'active' : ''}" 
+              type="button" 
+              data-archive-id="${ev.id}" 
+              data-index="${idx}"
+              role="listitem"
+              aria-label="Open ${ev.title}">
+        <div class="idx-left">
+          <span class="idx-num">${ev.archiveNumber}</span>
+          <span class="idx-title">${ev.title}</span>
+        </div>
+        <div class="idx-right">
+          <span class="idx-date">${ev.date}</span>
+          <span class="idx-arrow" aria-hidden="true">→</span>
+        </div>
+      </button>
+    `).join('');
+  }
+
+  const archiveCards = qsa('.archive-card');
+
+  // Update Deck function with smooth 3D perspective layering
   const updateDeck = (newIndex) => {
+    if (totalCards === 0) return;
     activeCardIndex = (newIndex + totalCards) % totalCards;
+
     if (archiveDeckStage) {
       archiveDeckStage.dataset.active = String(activeCardIndex);
     }
-    archiveCards.forEach((card, idx) => {
-      const isActive = idx === activeCardIndex;
-      card.classList.toggle('active', isActive);
-      card.setAttribute('aria-expanded', String(isActive));
-    });
     if (deckCurIdx) {
       deckCurIdx.textContent = String(activeCardIndex + 1).padStart(2, '0');
     }
+
+    archiveCards.forEach((card, idx) => {
+      let rel = idx - activeCardIndex;
+      if (rel > totalCards / 2) rel -= totalCards;
+      if (rel < -totalCards / 2) rel += totalCards;
+
+      card.classList.remove('card-active', 'card-next', 'card-prev', 'card-hidden', 'active');
+
+      if (rel === 0) {
+        card.classList.add('card-active', 'active');
+        card.setAttribute('aria-expanded', 'true');
+      } else if (rel === 1) {
+        card.classList.add('card-next');
+        card.setAttribute('aria-expanded', 'false');
+      } else if (rel === -1) {
+        card.classList.add('card-prev');
+        card.setAttribute('aria-expanded', 'false');
+      } else {
+        card.classList.add('card-hidden');
+        card.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Sync Archive Index active item
+    qsa('.archive-index-item').forEach((item, idx) => {
+      const isAct = idx === activeCardIndex;
+      item.classList.toggle('active', isAct);
+      if (isAct) {
+        item.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+      }
+    });
   };
 
+  // Card click events
   archiveCards.forEach((card, idx) => {
     card.addEventListener('click', () => {
       if (idx !== activeCardIndex) {
-        // Bring clicked card to center
         updateDeck(idx);
       } else {
-        // Active center card clicked: open dossier
-        const archiveId = card.dataset.archiveId;
-        openDossier(archiveId);
+        openDossier(card.dataset.archiveId);
       }
     });
 
@@ -136,6 +248,15 @@
           openDossier(card.dataset.archiveId);
         }
       }
+    });
+  });
+
+  // Archive Index item click events (directly opens that event!)
+  qsa('.archive-index-item').forEach((item, idx) => {
+    item.addEventListener('click', () => {
+      const archiveId = item.dataset.archiveId;
+      updateDeck(idx);
+      openDossier(archiveId);
     });
   });
 
@@ -155,70 +276,8 @@
     }
   }, { passive: true });
 
-  // =========================================================
-  // DOSSIER SPECIFICATION DATA
-  // =========================================================
-
-  const dossierData = {
-    lumiere: {
-      idCode: 'ID: CP-2025-01',
-      security: 'DECLASSIFIED // SJEC-CSE RECORD',
-      entryIndex: 'ARCHIVE ENTRY 01',
-      date: '29 OCTOBER 2025',
-      title: 'LUMIÈRE — THE GALA',
-      category: 'COMMUNITY / BRANCH ENTRY',
-      poster: 'lumiere-poster.jpg',
-      posterBadge: 'STAGE // KALAM AUDITORIUM',
-      posterTime: '29 OCT 2025',
-      statusText: 'ARCHIVED & VERIFIED',
-      description: [
-        'The Department of Computer Science and Engineering held its branch entry programme "Lumière – The Gala" on 29 October 2025 at the Kalam Auditorium.',
-        'Organised by the Cipher Association, the programme welcomed first-year students into the department through the theme "Where Glam Meets Glow."',
-        'The venue featured coordinated red, gold and black décor, floral arrangements, illuminated panels and a central Lumière backdrop.',
-        'The event encouraged interaction among students and showcased the role of Cipher in building an active student community beyond academics.'
-      ],
-      stats: [
-        { label: 'VENUE', val: 'Kalam Auditorium' },
-        { label: 'THEME', val: 'Where Glam Meets Glow' },
-        { label: 'ORGANISED BY', val: 'CIPHER Association' },
-        { label: 'AUDIENCE', val: 'First-Year CSE Cohort' },
-        { label: 'PURPOSE', val: 'Community & Student Onboarding' }
-      ],
-      hasGallery: true,
-      galleryCountText: '[50 PHOTOS]',
-      prevId: 'promptops',
-      nextId: 'promptops'
-    },
-    promptops: {
-      idCode: 'ID: CP-2026-02',
-      security: 'TECHNICAL RECORD // AI COMPETITION',
-      entryIndex: 'ARCHIVE ENTRY 02',
-      date: '25 MARCH 2026',
-      title: 'PROMPT OPS–2K26',
-      category: 'AI / TECHNICAL COMPETITION',
-      poster: 'prompt-ops-poster.jpg',
-      posterBadge: 'AGENTBLAZER × CIPHER',
-      posterTime: '25 MAR 2026',
-      statusText: 'LOGGED & VERIFIED',
-      description: [
-        'Organised jointly by AgentBlazer Club and Cipher under the guidance of Ms. Nisha J Roche, Ms. Jaishma K and HOD Dr. Melwyn D\'Souza.',
-        'Track 1 challenged first-year students in invitation generation, logo recreation and image recreation.',
-        'Track 2 tested JSON conversion, Python debugging and Gemini AI security prompt extraction.',
-        'The competition promoted prompt engineering, AI literacy and practical problem solving.'
-      ],
-      stats: [
-        { label: 'STRUCTURE', val: '2 Specialized Tracks' },
-        { label: 'CHALLENGES', val: 'Prompt Eng · JSON · Python' },
-        { label: 'AI DEFENSE', val: 'Gemini Security Challenge' },
-        { label: 'ORGANISERS', val: 'AgentBlazer Club × Cipher' },
-        { label: 'FACULTY GUIDES', val: 'Ms. Nisha, Ms. Jaishma, Dr. Melwyn' }
-      ],
-      hasGallery: false,
-      galleryCountText: '[PROTOCOL LOGGED]',
-      prevId: 'lumiere',
-      nextId: 'lumiere'
-    }
-  };
+  // Initial update
+  updateDeck(0);
 
   // =========================================================
   // DOSSIER MODAL CONTROLLER
@@ -233,6 +292,7 @@
   const dossierSecurityTag = qs('#dossierSecurityTag');
   const dossierIdCode = qs('#dossierIdCode');
   const dossierStatusText = qs('#dossierStatusText');
+  const dossierVenueText = qs('#dossierVenueText');
   const dossierEntryIndex = qs('#dossierEntryIndex');
   const dossierEntryDate = qs('#dossierEntryDate');
   const dossierTitle = qs('#dossierTitle');
@@ -241,39 +301,49 @@
   const dossierStatsGrid = qs('#dossierStatsGrid');
   const dossierGalleryBtn = qs('#dossierGalleryBtn');
   const dossierGalleryCount = qs('#dossierGalleryCount');
+  const dossierOfficialLink = qs('#dossierOfficialLink');
   const dossierNavPrev = qs('#dossierNavPrev');
   const dossierNavNext = qs('#dossierNavNext');
 
   let currentDossierId = 'lumiere';
 
   const openDossier = (archiveId) => {
-    const data = dossierData[archiveId];
-    if (!data) return;
+    const eventIndex = events.findIndex(e => e.id === archiveId);
+    if (eventIndex === -1) return;
+    const data = events[eventIndex];
     currentDossierId = archiveId;
 
-    // Populate Dossier
-    if (dossierIdCode) dossierIdCode.textContent = data.idCode;
-    if (dossierSecurityTag) dossierSecurityTag.textContent = data.security;
+    // Populate Dossier Elements
+    if (dossierIdCode) dossierIdCode.textContent = `ID: CP-${data.isoDate ? data.isoDate.split('-')[0] : '2024'}-${data.archiveNumber}`;
+    if (dossierSecurityTag) dossierSecurityTag.textContent = `OFFICIAL RECORD // SJEC-CSE`;
     if (dossierPosterImg) {
-      dossierPosterImg.src = data.poster;
+      dossierPosterImg.src = data.coverImage;
+      dossierPosterImg.onerror = () => {
+        if (data.remoteCoverImage && dossierPosterImg.src !== data.remoteCoverImage) {
+          dossierPosterImg.src = data.remoteCoverImage;
+        }
+      };
       dossierPosterImg.alt = `${data.title} visual archive`;
     }
-    if (dossierPosterBadge) dossierPosterBadge.textContent = data.posterBadge;
-    if (dossierPosterTime) dossierPosterTime.textContent = data.posterTime;
-    if (dossierStatusText) dossierStatusText.textContent = data.statusText;
-    if (dossierEntryIndex) dossierEntryIndex.textContent = data.entryIndex;
+    if (dossierPosterBadge) dossierPosterBadge.textContent = data.badge || 'SJEC CSE ARCHIVE';
+    if (dossierPosterTime) dossierPosterTime.textContent = data.date;
+    if (dossierStatusText) dossierStatusText.textContent = 'ARCHIVED & VERIFIED';
+    if (dossierVenueText) dossierVenueText.textContent = data.venue || 'SJEC Campus, Vamanjoor';
+    if (dossierEntryIndex) dossierEntryIndex.textContent = `ARCHIVE ENTRY ${data.archiveNumber}`;
     if (dossierEntryDate) dossierEntryDate.textContent = data.date;
     if (dossierTitle) dossierTitle.textContent = data.title;
     if (dossierCategory) dossierCategory.textContent = data.category;
 
     // Description paragraphs
     if (dossierDescription) {
-      dossierDescription.innerHTML = data.description.map(p => `<p>${p}</p>`).join('');
+      const paras = Array.isArray(data.description) ? data.description : [data.description];
+      dossierDescription.innerHTML = paras.map(p => `<p>${p}</p>`).join('');
     }
 
     // Specifications Grid
     if (dossierStatsGrid) {
-      dossierStatsGrid.innerHTML = data.stats.map(s => `
+      const stats = data.stats || [];
+      dossierStatsGrid.innerHTML = stats.map(s => `
         <div class="dossier-stat-card">
           <span class="dossier-stat-label">${s.label}</span>
           <strong class="dossier-stat-val">${s.val}</strong>
@@ -285,16 +355,25 @@
     if (dossierGalleryBtn && dossierGalleryCount) {
       if (data.hasGallery) {
         dossierGalleryBtn.style.display = 'inline-flex';
-        dossierGalleryCount.textContent = data.galleryCountText;
+        dossierGalleryCount.textContent = data.galleryCountText || '[GALLERY AVAILABLE]';
         dossierGalleryBtn.onclick = () => openGallery();
       } else {
         dossierGalleryBtn.style.display = 'none';
       }
     }
 
+    // Official SJEC Link
+    if (dossierOfficialLink) {
+      if (data.officialUrl) {
+        dossierOfficialLink.style.display = 'inline-flex';
+        dossierOfficialLink.href = data.officialUrl;
+      } else {
+        dossierOfficialLink.style.display = 'none';
+      }
+    }
+
     // Sync deck active state with opened card
-    const targetIdx = archiveId === 'lumiere' ? 0 : 1;
-    updateDeck(targetIdx);
+    updateDeck(eventIndex);
 
     // Open Modal
     archiveDossierModal?.classList.add('open');
@@ -314,12 +393,18 @@
   dossierBackdrop?.addEventListener('click', closeDossier);
 
   dossierNavPrev?.addEventListener('click', () => {
-    const prev = dossierData[currentDossierId]?.prevId;
-    if (prev) openDossier(prev);
+    const curIdx = events.findIndex(e => e.id === currentDossierId);
+    if (curIdx !== -1) {
+      const prevIdx = (curIdx - 1 + events.length) % events.length;
+      openDossier(events[prevIdx].id);
+    }
   });
   dossierNavNext?.addEventListener('click', () => {
-    const next = dossierData[currentDossierId]?.nextId;
-    if (next) openDossier(next);
+    const curIdx = events.findIndex(e => e.id === currentDossierId);
+    if (curIdx !== -1) {
+      const nextIdx = (curIdx + 1) % events.length;
+      openDossier(events[nextIdx].id);
+    }
   });
 
   // =========================================================
