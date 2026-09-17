@@ -5163,3 +5163,41 @@ body {
 .nav-linkedin:hover .nav-linkedin-text {
     color: #ffffff;
 }
+/* LinkedIn beside CONTACT */
+.desktop-nav .nav-linkedin {
+    margin-left: 4px;
+    padding: 0 18px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    color: #fff;
+    background: rgba(239, 81, 71, 0.10);
+    border: 1px solid rgba(239, 81, 71, 0.65);
+
+    text-decoration: none;
+    font: 600 11px var(--display);
+    letter-spacing: .13em;
+
+    transition: all .25s ease;
+}
+
+.desktop-nav .nav-linkedin svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.desktop-nav .nav-linkedin-text {
+    color: #fff;
+}
+
+.desktop-nav .nav-linkedin:hover {
+    color: #fff;
+    background: var(--red);
+    border-color: var(--red);
+    transform: translateY(-1px);
+}
