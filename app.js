@@ -147,10 +147,10 @@ window.addEventListener("load", () => {
 
           <div class="card-poster-wrap">
             <img class="card-poster-img" 
-                 src="${ev.coverImage}" 
+                 src="${ev.coverImage || 'lumiere-poster.jpg'}" 
                  alt="${ev.title}" 
                  loading="${idx < 3 ? 'eager' : 'lazy'}" 
-                 onerror="if(this.src!=='${ev.remoteCoverImage}' && '${ev.remoteCoverImage}'){this.src='${ev.remoteCoverImage}'}">
+                 onerror="if(this.dataset.fallbackApplied !== '1'){ this.dataset.fallbackApplied = '1'; if('${ev.remoteCoverImage}' && this.src !== '${ev.remoteCoverImage}'){ this.src = '${ev.remoteCoverImage}'; } else { this.src = 'lumiere-poster.jpg'; } } else { this.src = 'lumiere-poster.jpg'; }">
             <div class="card-poster-tag">
               <span>${ev.badge || 'SJEC CSE'}</span>
               <span>${ev.subtitle || 'ARCHIVED'}</span>
@@ -832,9 +832,10 @@ window.addEventListener("load", () => {
     form.reset();
   });
 
-  
-
-/* =========================================================
+  // Preserve deep link on load for #about etc.
+  const initial = location.hash.replace('#','');
+  if (initial && document.getElementById(initial)) setTimeout(() => scrollToId(initial), 50);
+})();/* =========================================================
    CIPHER INTRO PARTICLES
    ========================================================= */
 

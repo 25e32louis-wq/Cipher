@@ -3937,12 +3937,13 @@ body {
 .archive-deck-stage {
     position: relative;
     width: 100%;
-    height: 560px;
+    min-height: 520px;
+    height: auto;
     perspective: 1400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 10px;
 }
 
@@ -5199,7 +5200,8 @@ body {
 
 @media (max-width: 1024px) {
     .archive-deck-stage {
-        height: 520px;
+        min-height: 480px;
+        height: auto;
     }
     .deck-perspective-viewport {
         height: 450px;
@@ -5239,7 +5241,8 @@ body {
         margin-bottom: 36px;
     }
     .archive-deck-stage {
-        height: 480px;
+        min-height: 450px;
+        height: auto;
     }
     .deck-perspective-viewport {
         height: 420px;
