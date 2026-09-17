@@ -1,3 +1,15 @@
+// =====================================================
+// FORCE PAGE TO OPEN AT THE TOP
+// =====================================================
+
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
+});
+
 (() => {
   'use strict';
 
@@ -820,10 +832,7 @@
     form.reset();
   });
 
-  // Preserve deep link on load for #about etc.
-  const initial = location.hash.replace('#','');
-  if (initial && document.getElementById(initial)) setTimeout(() => scrollToId(initial), 50);
-})();
+  
 
 /* =========================================================
    CIPHER INTRO PARTICLES
