@@ -5345,3 +5345,61 @@ body {
     border-color: var(--red);
     transform: translateY(-1px) !important;
 }
+.desktop-nav .nav-linkedin,
+.desktop-nav .nav-instagram {
+    position: relative !important;
+    top: auto !important;
+
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    height: 34px !important;
+    padding: 0 13px !important;
+
+    margin-top: 0 !important;
+
+    color: #ffffff !important;
+    background: rgba(239, 81, 71, 0.08);
+
+    border: 1px solid rgba(239, 81, 71, 0.55);
+    border-radius: 2px;
+
+    text-decoration: none;
+
+    font: 600 10px var(--display);
+    letter-spacing: .11em;
+
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.desktop-nav .nav-linkedin {
+    margin-left: 10px !important;
+}
+
+.desktop-nav .nav-instagram {
+    margin-left: 7px !important;
+}
+
+.desktop-nav .nav-linkedin svg,
+.desktop-nav .nav-instagram svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.desktop-nav .nav-linkedin::after,
+.desktop-nav .nav-instagram::after {
+    display: none !important;
+}
+
+.desktop-nav .nav-linkedin:hover,
+.desktop-nav .nav-instagram:hover {
+    color: #ffffff !important;
+    background: var(--red);
+    border-color: var(--red);
+    transform: translateY(-1px);
+}
