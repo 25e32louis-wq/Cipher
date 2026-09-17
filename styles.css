@@ -5223,3 +5223,16 @@ body {
     margin-top: 0;
     margin-bottom: 0;
 }
+/* FINAL NAV LINKEDIN POSITION */
+.desktop-nav .nav-linkedin {
+    position: relative !important;
+    top: 11px !important;
+    align-self: center !important;
+    height: 36px !important;
+    margin: 0 0 0 4px !important;
+    transform: none !important;
+}
+
+.desktop-nav .nav-linkedin:hover {
+    transform: translateY(-1px) !important;
+}
